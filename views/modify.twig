@@ -1,0 +1,10 @@
+
+ contactId {{contactId}}
+ <br/>
+ <form action="http://localhost:3000/contacts/saveContactModification" method="post">
+ <input type="hidden" name="id" value="{{contactId}}"/>
+ <input type="text" name="Fullname" value="{{FullName}}">
+ <br/>
+ <input type="number" name="Phone" value="{{Phone}}">
+ <Button type="submit">Save</Button>
+ </form>

@@ -1,0 +1,16 @@
+<html> <body> <h1> {{ title }} </h1> <ul>
+ {% for c in cont %}
+ <li>{{ c.FullName }}</li>
+ <a href="http://localhost:3000/contacts/deleteContact/{{c.id}}"><Button>Remove</Button></a>
+ <form method="get" action="http://localhost:3000/contacts/modifyContact/{{c.id}}">
+ <Button type="submit">modify</Button>
+ </form>
+ {% endfor %}
+</ul>
+<form method="post">
+<input type="text" name="FullName" value="{{ FullName }}" />
+<input type="number" name="Phone" value="{{ Phone }}"/>
+<input type="submit" value="Submit" style="color:white;background-color:red;" />
+</form>
+</body>
+</html>
